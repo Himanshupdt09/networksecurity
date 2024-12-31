@@ -92,7 +92,11 @@ jobs:
       # Stop and remove any existing containers before starting new one
       - name: Stop and remove existing container if running
         run: |
-          docker ps -q --filter "name=networksecurity" | grep -q . && docker stop networksecurity && docker rm -fv networksecurity
+          if docker ps -q --filter "name=networksecurity"; then
+            docker stop networksecurity && docker rm -fv networksecurity
+          else
+            echo "No running container named 'networksecurity' found"
+          fi
 
       - name: Pull latest images
         run: |
