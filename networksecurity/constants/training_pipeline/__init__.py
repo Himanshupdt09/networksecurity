@@ -2,9 +2,8 @@ import os
 import sys
 import numpy as np
 import pandas as pd
-"""
-Data Ingestion related constants
-"""
+
+
 TARGET_COLUMN="Result"
 PIPELINE_NAME: str="NetworkSecurity"
 ARTIFACT_DIR:str="Artifacts"
@@ -16,7 +15,11 @@ TEST_FILE_NAME: str="test.csv"
 SCHEMA_FILE_PATH=os.path.join("data_schema","schema.yaml")
 
 PREPROCESSING_OBJECT_FILE_NAME:str="preprocessing.pkl"
-
+SAVED_MODEL_DIR=os.path.join("saved_models")
+MODEL_FILE_NAME="model.pkl"
+"""
+Data Ingestion related constants
+"""
 DATA_INGESTION_COLLECTION_NAME: str="NetworkData"
 DATA_INGESTION_DATABASE_NAME: str="HIMANSHU_DB"
 DATA_INGESTION_DIR_NAME: str="data_ingestion"
@@ -45,3 +48,12 @@ DATA_TRANSFORMATION_INPUTER_PARAMS:dict={
 }
 
 
+"""
+Model Trainer related constants start with MODEL_TRAINER_VAR_NAME
+"""
+
+MODEL_TRAINER_DIR_NAME: str = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
+MODEL_TRAINER_MODEL_FILE_NAME: str = "model.pkl"
+MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
+MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD: float = 0.05
