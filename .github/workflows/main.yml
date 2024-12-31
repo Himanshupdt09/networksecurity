@@ -89,13 +89,14 @@ jobs:
         run: |
           docker system prune -af
 
-      # Stop and remove any existing containers before starting new one
+      # Stop and remove any existing containers before starting a new one
       - name: Stop and remove existing container if running
         run: |
-          if docker ps -q --filter "name=networksecurity"; then
+          container_id=$(docker ps -a -q --filter "name=networksecurity")
+          if [ -n "$container_id" ]; then
             docker stop networksecurity && docker rm -fv networksecurity
           else
-            echo "No running container named 'networksecurity' found"
+            echo "No container named 'networksecurity' found"
           fi
 
       - name: Pull latest images
