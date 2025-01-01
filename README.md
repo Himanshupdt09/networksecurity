@@ -113,8 +113,8 @@ This project is an **end-to-end Machine Learning pipeline** designed to classify
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/website-classification.git
-   cd website-classification
+   git clone https://github.com/Himanshupdt09/networksecurity.git
+   cd networksecurity
    ```
 2. Install dependencies:
    ```bash
