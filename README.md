@@ -1,4 +1,4 @@
-# Phising Websites Detection
+# Phishing Websites Detection
 
 ## 🌟 Overview
 
@@ -17,7 +17,8 @@ This project is an **end-to-end Machine Learning pipeline** designed to classify
 
 ## 📊 Dataset
 
-- **Rows**: 11,055
+- **Source**: [Phishing Websites Dataset on Kaggle](https://www.kaggle.com/datasets/nitsey/dataset-phising-website)
+- **Rows**: 22,109
 - **Columns**: 30 Features + 1 Target Column
 - **Target**: `Result` (Indicates whether the website is malicious or safe)
 - **Features**:
@@ -76,7 +77,7 @@ This project is an **end-to-end Machine Learning pipeline** designed to classify
 
 ---
 
-## 📂 Project Structure
+## 🗂️ Project Structure
 
 ``` plaintext
 
@@ -136,7 +137,7 @@ This project is an **end-to-end Machine Learning pipeline** designed to classify
 
 ---
 
-## 📈 Future Scope
+## 📊 Future Scope
 
 - Integrate additional ML algorithms like XGBoost.
 - Implement automated data drift monitoring.
